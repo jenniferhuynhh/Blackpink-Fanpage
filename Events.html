@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/style.css"/>
+        <meta name="viewport" content="width=800"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/> 
+        <title>Sign Up</title>
+    </head>
+
+    <body>
+        <div class="banner-3">
+            <nav>
+                <div class="nav-bar" id="nav-bar">
+                    <a href="Index.html">
+                        <img src="images/yg-logo.png" class="logo"/>
+                    </a>
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="Index.html">Home</a></li>
+                        <li><a href="Discography.html">Discography</a></li>
+                        <li><a href="Events.html">Events</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+            <div class="about">
+                <div class="about-title">
+                    <h1>Upcoming tours and events</h1>
+                    <div class="line"></div>
+                </div>
+
+                <div class="events">
+                    <div class="concert">
+                        <img src="images/ella.jpeg" />
+                        <div class="layer">
+                            <h3>New York</h3>
+                        </div>
+                    </div>
+                    <div class="concert">
+                        <img src="images/content_DSC_5212.jpg" />
+                        <div class="layer">
+                            <h3>Tokyo</h3>
+                        </div>
+                    </div>
+                    <div class="concert">
+                        <img src="images/pretty copy.jpeg" />
+                        <div class="layer">
+                            <h3>Singapore</h3>
+                        </div>
+                    </div>
+                    <div class="concert">
+                        <img src="images/jisoodance.jpeg" />
+                        <div class="layer">
+                            <h3>London</h3>
+                        </div>
+                    </div>
+                    <div class="concert">
+                        <img src="images/lisaa.jpeg" />
+                        <div class="layer">
+                            <h3>Beijing</h3>
+                        </div>
+                    </div>
+                    <div class="concert">
+                        <img src="images/content_NO1_0273.jpg" />
+                        <div class="layer">
+                            <h3>Brazil</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!------------Javascript for menu toggling ------------->
+        <script>
+            var navLinks = document.getElementById("nav-bar");
+            
+            function showMenu(){
+                navLinks.style.left = "0";
+            }
+
+            function hideMenu(){
+                navLinks.style.left = "-700px";
+            }
+        </script>
+
+    </body>
+</html>
