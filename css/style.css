@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500&family=Nothing+You+Could+Do&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Kristi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=The+Nautigal:wght@700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    color: #fff;
+    background-color: black;
+    margin: 0;
+    font-family: "Work Sans";
+    letter-spacing: 1px;
+}
+
+.banner{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(../images/blackpink.jpeg) ;
+    background-size: cover;
+    background-position: top;
+    animation: showup 4s 1;
+}
+
+.banner-2{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/lovesick-girls.jpeg) ;
+    background-size: cover;
+    background-position: center;
+    animation: showup 3s 1;
+}
+
+.banner-3{
+    height: 100vh;
+    width: 100%;
+    animation: showup 3s 1;
+   background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/concert.jpeg) ;
+    background-size: cover;
+    background-position: center;
+}
+
+.nav-bar {
+    position: fixed;
+    width: 92%;
+    margin: auto;
+    left: 45px;
+    display: flex;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+    top: 0;
+}
+
+.nav-bar ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 10px 0px 100px;
+    position: relative;
+}
+
+.nav-bar ul li a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-bar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #f1a8bb;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.4s;
+}
+
+.nav-bar ul li:hover::after{
+    width: 100%;
+}
+
+.logo {
+    width: 150px;
+}
+
+nav .fa{
+    display: none;
+}
+
+
+.content {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    transform: translateY(-50%);
+    top: 52%;
+}
+
+.content h1{
+    letter-spacing: 9px;
+    font-family: "Poppins";
+    font-size: 12vmin;
+    color: #f1a8bb;
+    margin: 0;
+    padding-top: 15px;
+    animation: h1Slide 1.7s 1;
+}
+
+@keyframes h1Slide{
+    0% { transform: translateY(-60%);}
+}
+
+.content div{
+    padding-top: 20px;
+}
+
+button {
+    width: 220px;
+    height: 5.5vmin;
+    margin: 10px 30px;
+    border-radius: 20px;
+    background: transparent;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.6vmin;
+    text-align: center;
+    border: 2px solid #f1a8bb;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    animation: buttonSlide 1.7s 1;
+}
+
+@keyframes buttonSlide{
+    0% { transform: translateY(100%); }
+}
+
+button:hover {
+    background: #f1a8bb;
+    transition: background 0.3s ease-in;
+}
+
+.members{
+    height: 100vh;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 0px 50px;
+    margin: auto;
+    color: #fff;
+    transition: all ease-in 0.5s;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150x);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.members-info{
+    display: block;
+    width: 80%;
+    animation: slidedown 2s 1;
+}
+
+.members-info h1{
+    font-family: "Poppins";
+    font-size: 10vmin;
+    margin: 0;
+    margin-left: -65px;
+}
+
+@keyframes showup{
+    0% {opacity: 0;}
+    40% {opacity: 1;} 
+}
+
+@keyframes reveal{
+    30% {width: 215px;}
+    80% {width: 215px;}
+}
+
+@keyframes slidein{
+    0% {margin-left: -355px;}
+    40% {margin-left: 0px;}
+}
+
+#first-name{
+    color:#f1a8bb;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/*#first-name:first-of-type{
+    animation: showup 5s 1;
+}*/
+
+#last-name{
+    display: inline-block;
+    margin-left: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/*#last-name:last-of-type{
+    animation: showup 5s 1;
+    animation: reveal 5s 1;
+}
+
+.name:last-of-type{
+    animation: slidein 5s 1;
+}*/
+
+.right-members-info #first-name{
+    color: #fff;
+}
+
+.right-members-info #last-name{
+    color: #f1a8bb;
+    margin-right: -112px;
+    z-index: 999;
+}
+
+/*
+.members-info:nth-child(2) h1{
+    font-family: "Poppins";
+    font-size: 90px;
+    margin: 0;
+    margin-left: -65px;
+    line-height: 100px;
+}*/
+
+.members-info h2{
+    margin-left: 70px !important;
+    font-size: 3vmin;
+}
+
+.members-info p {
+    margin-left: 70px !important;
+    position: relative;
+    line-height: 22px;
+    align-items: center;
+}
+
+.right-members-info{
+    text-align: right;
+    margin-right: 70px;
+    animation: slidedown 2s 1;
+}
+
+.right-members-info h1{
+    font-family: "Poppins";
+    font-size: 10vmin;
+    margin: 0;
+}
+
+.right-members-info h2 p{
+    margin-left: 0px;
+    position: relative;
+    line-height: 22px;
+    text-align: right;
+}
+
+.right-members-info p{
+    position: relative;
+    line-height: 22px;
+    font-size: 2vmin;
+    text-align: right;
+}
+
+.members-info p::before{
+    content: '';
+    position: absolute;
+    width: 1px;
+    top: 8px;
+    height: 100%;
+    left: -25px;
+    background: linear-gradient(to top, transparent, #fff);
+}
+
+.right-members-info p::before{
+    content: '';
+    position: absolute;
+    width: 1px;
+    top: 8px;
+    height: 100%;
+    right: -20px;
+    background: linear-gradient(to top, transparent, #fff);
+}
+
+.member-image {
+    width: auto;
+    height: 66vmin;
+    z-index: -1;
+    animation: slidedown 2s 1;
+}
+
+#rose-image{
+    width: 380px;
+    height: auto;
+}
+
+.albums{
+    height: 100vh;
+    width: 100%;
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+    overflow-x: scroll;
+}
+
+.album-slider{
+    position: absolute;
+    top: 55%;
+    transform: translateY(-44%);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0 100px;
+    align-items: center;
+    margin-right: 50px;
+    color: #fff;
+    font-size: 15px;
+}
+
+.album-slider div{
+    margin: 0 10px 0 10px;
+    display: inline-block;
+    text-align: center;
+    left: 0;
+    align-items: center;
+    animation: slideup 2s 1;
+}
+
+@keyframes slideup{
+    0% { transform: translateY(20%);}
+}
+
+.album-slider img{
+    width: 38vmin;
+    height: 38vmin;
+    margin: 0 20px 0 20px;
+    padding: 10px 10px;
+    filter: brightness(70%);
+}
+
+.album-slider img:hover{
+    filter: saturate(100%);
+    width: 50vmin;
+    height: 50vmin;
+    transition: 0.7s;
+    /*transform: translateY(11%);*/
+}
+
+.about{
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    transition: all ease 2s;
+}
+
+.about-title{
+    width: 100%;
+    padding-top: 130px;
+}
+
+.about-title h1 {
+    font-size: 4.5vmin;
+    font-family: "Poppins";
+    font-weight: 400;
+    margin-top: 0px !important;
+    margin-bottom: 0px;
+    color: white;
+}
+
+.line{
+    width: 35vmin;
+    height: 4px;
+    background: #f1a8bb;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 8px;
+    margin-bottom: 40px;
+    animation: revealself 2s 1;
+}
+
+.events {
+    width: 100%;
+    text-align: center;
+}
+
+.concert{
+    display: inline-block;
+    flex-basis: 32%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 500px;
+    margin-left: 3px;
+    margin-bottom: 8px;
+    animation: revealself 2.5s 1;
+}
+
+@keyframes revealself{
+    0% {width: 0px;}
+}
+
+.concert img{
+    height: 100%;
+    filter: brightness(75%)
+}
+
+.layer{
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.layer:hover{
+    background: rgba(1,1,1, 0.8);
+}
+
+.layer h3{
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 2.5vmin;
+    bottom: 0;
+    left: 0;
+    font-weight: bold;
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    font-family: "Mulish";
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+@keyframes slidedown{
+    0% { transform: translateY(-20%);}
+}
+
+/** mobile device**/
+@media(max-width: 800px){
+    .body{
+        height: 100vh;
+    }
+    .logo{
+        display: none;
+    }
+
+    .nav-bar ul{
+        left:0;
+        padding-left: 0px !important;
+    }
+
+    .nav-bar ul li{
+        display: block;
+        padding: 30px 50px;
+        margin: 0;
+        font-size: 4vmin;
+    }
+    
+    .nav-bar{
+        display: block;
+        background: rgba(1,1,1);
+        color: #f1a8bb;
+        height: 100vh;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: -700px;
+        z-index: 2;
+        justify-content: center;
+        padding-top: 0px;
+        transition: 1s;
+    }
+
+    .nav-bar ul li::after{
+        height: 0;
+        width: 0;
+    }
+    
+    .nav-bar ul li a:hover{
+        color: #f1a8bb;
+        transition: 0.3s;
+    }
+
+    nav .fa{
+        display: block;
+        color: white;
+        padding: 15px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    nav .fa:hover{
+        color: #f1a8bb;
+        transition: 0.3s;
+    }
+
+    .about-title{
+        padding-top: 30px;
+    }
+
+    .concert{
+        width: 280px;
+        height: 580px;
+        animation: slideup 2s 1;
+        margin-bottom: 15px;
+    }
+
+    .layer{
+        margin-bottom: 15px;
+    }
+
+    .albums{
+        overflow-y: scroll;
+        align-items: center;
+        justify-content: center;
+        left: -40px;
+    }
+    .album-slider{
+        top: 0;
+        transform: translateY(0%);
+    }
+   
+    .album-slider div{
+        display: block;
+        animation: slidedown 2s 1;
+        padding-bottom: 20px;
+        padding-top: 10px;
+    }
+    
+    .album-slider img{
+        width: 50vmin;
+        height: 50vmin;
+    }
+    
+    .album-slider img:hover{
+        width: 62vmin;
+        height: 62vmin;
+    }
+    ::-webkit-scrollbar{
+        width: 0;
+    }
+
+    .banner-2{
+        overflow: scroll;
+    }
+
+    .content h1{
+        font-size: 10vmin;
+    }
+
+    button {
+        width: 42vmin;
+    }
+
+    .member-image, #rose-image{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    
+    .members-info p, .right-members-info p, .members-info h2, .right-members-info h2{ 
+        display: none;
+    }
+
+    .members{
+        width: 100%;
+        display: block;
+        padding: 0;
+    }
+    
+    .reveal.active{
+        transform: none;
+    }
+
+    .members-info h1{
+        margin-left: 0;
+    }
+
+    .right-members-info{
+        text-align: left;
+        margin-right: 0;
+    }
+ 
+}
+
