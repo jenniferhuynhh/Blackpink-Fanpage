@@ -123,7 +123,7 @@ nav .fa{
 
 button {
     width: 220px;
-    height: 5.5vmin;
+    height: 40px;
     margin: 10px 30px;
     border-radius: 20px;
     background: transparent;
@@ -254,6 +254,7 @@ button:hover {
     position: relative;
     line-height: 22px;
     align-items: center;
+    font-size: 2vmin;
 }
 
 .right-members-info{
@@ -576,6 +577,7 @@ button:hover {
 
     button {
         width: 42vmin;
+        height: 5.5vmin;
     }
 
     .member-image, #rose-image{
